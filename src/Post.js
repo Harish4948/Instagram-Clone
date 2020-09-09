@@ -1,7 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './Post.css';
 import Avatar from "@material-ui/core/Avatar";
-function Post({username,caption,imageUrl}) {
+// import {db} from './firebase';
+function Post({key,username,caption,imageUrl}) {
+   
+   
+
     return (
         <div className="post">
             <div className="post__header">

@@ -14,3 +14,12 @@
   border-bottom: 1px solid lightgray;
   object-fit: contain;
 }
+
+.app__signup
+{
+  display: flex;
+  padding:20px;
+  flex-direction: column;
+  align-items: center;
+  
+}
