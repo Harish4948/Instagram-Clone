@@ -3,6 +3,7 @@ import './App.css';
 import Post from './Post';
 import {db,auth,storage} from './firebase';
 import { Modal, makeStyles, Button,Input } from '@material-ui/core';
+import ImageUpload from './ImageUpload';
 // import db from './firebase';
 function getModalStyle() {
   const top = 50;
@@ -89,6 +90,18 @@ function App() {
 
   return (
     <div className="app">
+    
+    {/* User Input       */}
+    
+    {/* ? below to check if user state exists(basically dont freak out)
+    then check the condition and */}
+
+    {user?.displayName ? (
+    <ImageUpload username={user.displayName} />
+    ): (<h3>Login to upload</h3>)}
+    
+
+    {/* Sign Up Modal */}
         <Modal
         open={open}
         onClose={()=>setOpen(false)}
